@@ -1,0 +1,21 @@
+#compile
+cc ./txxt.c -o txxt
+
+#examples
+./txxt
+./txxt -h
+./txxt -kkey.3
+./txxt -kkey.4
+./txxt -kkey.16
+./txxt -kkey.18
+./txxt -kkey.16 -D
+./txxt -kkey.16 -D -d
+./txxt -k<(printf 12345678abcdefgh) -D <loremipsum.txt
+./txxt -kkey.16 <loremipsum.txt >loremipsum.txt.enc
+./txxt -kkey.16 -d <loremipsum.txt.enc >loremipsum.txt.enc.txt
+
+./txxt -kkey.16 <loremipsum.txt | ./txxt -kkey.16 -d
+
+./txxt -k<(printf 12345678abcdefgh) <loremipsum.txt > loremipsum.txt.enc
+./txxt -k<(printf 12345678abcdefgh) -d <loremipsum.txt.enc > loremipsum.txt.enc.txt
+
