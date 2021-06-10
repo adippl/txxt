@@ -1,3 +1,5 @@
+# this porgram uses slightly modified code implementation of XXTEA encryption algorighm
+
 #compile
 cc ./txxt.c -o txxt
 
